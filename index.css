@@ -1,0 +1,813 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    scroll-behavior: smooth;
+    background-color: black;
+    overflow-x: hidden;
+}
+.header, .navbar, .container, .home, .about {
+    width: 100%; /* Ensure elements are not wider than the viewport */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+/* Adjust other elements similarly */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    text-shadow: 6px 6px 9px crimson;
+}
+
+.logo {
+    font-size: 45px;
+    color: beige;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right:60px;
+}
+
+.navbar {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: beige;
+    font-weight: 500;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: crimson;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.but {
+    background-color: #d2d2d2;
+    width: 60px;
+    height:20px;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s;
+}
+
+.but:before {
+    position: absolute;
+    content: "";
+    background-color:crimson;
+    width: 30px;
+    height: 20px;
+    border-radius: 100px;
+    transition: 0.2s;
+}
+
+input:checked + .but {
+    background-color: grey;
+}
+
+input:checked + .but:before {
+    transform: translateX(30px);
+}
+
+.container input {
+    display: none;
+}
+.home{
+    height: 100vh;
+    /* background: url('reddy1.jpg') norepeat;
+    background-size: cover;
+    background-position: center; */
+    display:flex;
+    align-items:center;
+    padding: 0 10%;
+    color: white;
+
+}
+.home-content{
+    max-width: 700px;
+}
+.home-content h1{
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+
+}
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    color: crimson;
+    
+}
+.home-content .btn-box{
+    width:1500px;
+    height: 50px;
+    background-color: transparent;
+}
+.btn-box{
+    align-items: center;
+}
+.btn-box a{
+    margin: 15px 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:200px;
+    height:100%;
+    border: 2px solid white;
+    border-radius: 8px;
+    color:crimson;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+.btn-box a:hover{
+    color:white;
+    background-color: crimson;
+
+}
+.home-sci{
+   position: absolute;
+    bottom: 210px;
+    width:200px;
+    background:transparent;
+}
+.home-sci a{
+    position: relative;
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background:transparent;
+    border:2px solid white;
+    border-radius: 50%;
+    font-size: 20px;
+    color:crimson;
+    text-decoration: none;
+    margin-left:5px;
+}
+.home-sci a:hover{
+    color:white;
+    background-color: crimson;
+
+}
+.home-imghover{
+    position: absolute; 
+    top:200px;
+    right:150px;
+    width:300px;
+    height:300px;
+    background: transparent;
+    border:3px double crimson;
+    transition: all 1s ease-in 0s; 
+}
+.about{
+    height: 100vh;
+    display:flex;
+    align-items:center;
+    padding: 0 10%;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+.about-content{
+    max-width: 900px;
+}
+.about-content h1{
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+}
+.about-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    color: crimson;
+}
+.about-content p {
+    font-size: 16px;
+}
+.about-content .btn-box{
+    width:1500px;
+    height: 50px;
+    background-color: transparent;
+}
+.about-imghover{
+    position: absolute; 
+    top:900px;
+    right:150px;
+    width:300px;
+    height:300px;
+    background: transparent;
+    border:3px double crimson;
+    transition: all 1s ease-in 0s;
+}
+.head{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 40px;
+    color : white;
+    text-shadow: 5px 5px 8px crimson;
+    
+ }
+ .skills-area{
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin:100px 400px
+
+ }
+ .skill{
+    position: relative;
+    margin-bottom: 10px;
+ }
+ .skill-title{
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: white;
+ }
+ .skill-bar{
+    width: 100%;
+    background: #353b48;
+    height:25px;
+    z-index: -1;
+    border-radius: 100px;
+    position: absolute;
+    
+ }
+ .skill-fill{
+    background: crimson;
+    height: 25px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+    overflow: hidden;
+ }
+ .skill-percent{
+    font-size: 30px;
+
+ }
+ .python{
+    animation: python 2s;
+    width:80%;
+ }
+ .sql{
+    animation: sql 2s;
+    width:85%;
+ }
+ .html{
+    animation: html 2s;
+    width:80%;
+ }
+ .css{
+    animation: css 2s;
+    width:70%;
+ }
+ .javascript{
+    animation: javascript 2s;
+    width:50%;
+ }
+@keyframes python{
+    from{
+        width: 0;
+    }
+    to{
+        width: 80%;
+    }
+}
+@keyframes sql{
+    from{
+        width: 0;
+    }
+    to{
+        width: 85%;
+    }
+}
+@keyframes html{
+    from{
+        width: 0;
+    }
+    to{
+        width: 80%;
+    }
+}
+@keyframes css{
+    from{
+        width: 0;
+    }
+    to{
+        width: 70%;
+    }
+}
+@keyframes javascript{
+    from{
+        width: 0;
+    }
+    to{
+        width: 50%;
+    }
+}
+  
+.progress-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    border: 1px solid;
+    width:700px;
+    margin-left:400px;
+    margin-bottom: 100px;
+    
+}
+
+.circle-progress {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(crimson 75%, #d6d6d6 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    
+}
+.circ{
+    color: white;
+}
+
+.inside-circle {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.certificate{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin:100px;
+}
+.chan{
+    margin: 10px;
+    color:  crimson;
+}
+.center{
+    text-align: center;
+    padding: 30px;
+}
+.b1,.b2,.b3{
+    width: 300px;
+    height: 320px;
+    /* background: grey; */
+    margin:15px;
+    padding: 5px;
+    color: white;
+    text-align: center;
+    transition: 1s;
+}
+a.click {
+    margin: 10px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100px;
+    height:50px;
+    border: 2px solid white;
+    border-radius: 8px;
+    color:crimson;
+    text-decoration: none;
+    letter-spacing: 1px;}
+
+.b1:hover,
+.b2:hover,
+.b3:hover{
+    background-color: #353b48;
+    border-radius: 50px;
+    box-shadow: 10px 10px 5px white;
+}
+ div.project{ 
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin: 50px;
+}
+.port img{
+    box-shadow: 10px 10px 15px crimson;
+}
+.port:hover{
+    transform:translateY(-20px);
+}
+.port{
+    transition: .4s ease;
+}
+/* .port .content{
+    border-image: fill 0 linear-gradient(crimson);
+    position: absolute;
+    bottom: 200px;
+    height: 200px;
+    text-align: center;
+    color: black;
+    padding-top:50px ;
+} */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+    
+}
+
+input {
+    height: 56px;
+    border-radius: 12px;
+    border: 1px solid white;
+    width: 450px;
+    padding: 0 8px 0 16px;
+    background-color: transparent;
+    color: white;
+    
+}
+
+.input-name {
+    display: flex;
+    gap: 45px;
+}
+
+.input-name input {
+    width: 200px;
+}
+
+.btn-submit {
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+    color: white;
+}
+.btn-submit:hover{
+    background-color: crimson;
+    color: white;
+
+}
+.footer{
+    position: absolute;
+     width:800px; 
+     height: 50px;
+     background:transparent;
+     margin: 50px 350px;
+     border: 1px solid transparent ;
+     background-color:  #353b48;
+     text-align: center;
+     border-radius: 10px;
+     padding: 5px;
+ }
+ .foo a{
+     position: relative;
+     display:inline-flex;
+     justify-content: center;
+     align-items: center;
+     width: 40px;
+     height: 40px;
+     background:transparent;
+     border:2px solid white;
+     border-radius: 50%;
+     font-size: 20px;
+     color:crimson;
+     text-decoration: none;
+     margin-left:5px;
+ }
+ .foo a:hover{
+     color:white;
+     background-color: crimson;
+ 
+ }
+ 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 5%; /* Reduce padding on smaller screens */
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .logo {
+        font-size: 36px; /* Reduce logo size */
+        margin-bottom: 10px; /* Add bottom margin */
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack navbar items */
+        align-items: center; /* Center align items */
+    }
+
+    .navbar a {
+        font-size: 16px; /* Reduce font size */
+        margin: 10px 0; /* Adjust margin for spacing */
+    }
+
+    .home {
+        padding: 0 5%; /* Adjust padding */
+    }
+
+    .home-content h1 {
+        font-size: 40px; /* Reduce header size */
+    }
+
+    .home-content h3 {
+        font-size: 24px; /* Reduce subheader size */
+    }
+
+    .home-sci {
+        bottom: 150px; /* Adjust position */
+        width: 150px; /* Adjust width */
+    }
+
+    .home-imghover {
+        width: 250px; /* Adjust image size */
+        height: 250px; /* Adjust image size */
+        top: 150px; /* Adjust position */
+        right: 100px; /* Adjust position */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 2%; /* Further reduce padding */
+    }
+
+    .logo {
+        font-size: 28px; /* Further reduce logo size */
+    }
+
+    .navbar a {
+        font-size: 14px; /* Further reduce font size */
+        margin: 5px 0; /* Further adjust margin */
+    }
+
+    .home {
+        padding: 0 2%; /* Further reduce padding */
+    }
+
+    .home-content h1 {
+        font-size: 32px; /* Further reduce header size */
+    }
+
+    .home-content h3 {
+        font-size: 20px; /* Further reduce subheader size */
+    }
+
+    .home-sci {
+        bottom: 100px; /* Adjust position */
+        width: 120px; /* Adjust width */
+    }
+
+    .home-imghover {
+        width: 200px; /* Adjust image size */
+        height: 200px; /* Adjust image size */
+        top: 300px; /* Adjust position */
+        right: 50px; /* Adjust position */
+    }
+}
+/* @media (max-width: 1200px) {
+    .home-content .btn-box,
+    .about-content .btn-box {
+        max-width: 300px; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 5%;
+    }
+    .logo {
+        margin-right: 30px;
+    }
+}
+    .navbar a {
+        font-size: 16px;
+        margin: 0 10px;
+    } */
+     /* Media Queries */
+/* Media Queries */
+@media (max-width: 1200px) {
+    .home-content, .about-content {
+        width: 500px;
+        padding: 0 5%;
+    }
+
+    .btn-box {
+        width: 100px; /* Make button box responsive */
+    }
+
+    .btn-box a {
+        width: 100px; /* Make buttons full-width */
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 5%;
+        width:300px;
+    }
+    
+    .logo {
+        margin-right: 30px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin: 0 10px;
+        width:300px;
+    }
+
+    .home, .about {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .home-content h1, .about-content h1 {
+        font-size: 36px;
+    }
+
+    .home-content h3, .about-content h3 {
+        font-size: 24px;
+    }
+
+    .home-content, .about-content {
+        max-width: 100%; /* Full width on smaller screens */
+        text-align: center;
+    }
+
+    .btn-box {
+        width: auto; /* Allow auto width */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar a {
+        font-size: 14px;
+    }
+
+    .home-content h1, .about-content h1 {
+        font-size: 28px;
+    }
+
+    .home-content h3, .about-content h3 {
+        font-size: 20px;
+    }
+
+    .home-content, .about-content {
+        padding: 10px; /* Reduced padding */
+    }
+    .footer {
+        width: 100%; /* Full width for footer */
+    }
+}
+/* Media Queries   FOR SKILLS */
+@media (max-width: 768px) {
+    .skills-area {
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    .skill-title {
+        font-size: 24px;
+    }
+
+    .skill-percent {
+        font-size: 24px;
+    }
+
+    .progress-container {
+        width: 100%;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .circle-progress {
+        /* margin-left: 0;
+        margin-right: 0; */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .head {
+        font-size: 32px;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .contact-container {
+        gap: 30px; /* Reduce gap for smaller screens */
+    }
+
+    input {
+        width: 90%; /* Make input fields responsive */
+    }
+
+    .input-name {
+        flex-direction: column; /* Stack inputs vertically on smaller screens */
+        align-items: center; /* Center align */
+        gap: 20px; /* Reduce gap between stacked inputs */
+    }
+
+    .input-name input {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .btn-submit {
+        width: 90%; /* Make button responsive */
+    }
+}
+
+@media (max-width: 480px) {
+    input {
+        height: 48px; /* Reduce height of input fields */
+    }
+
+    .btn-submit {
+        height: 40px; /* Reduce button height */
+    }
+}
+
+@media (max-width: 480px) {
+    .head {
+        font-size: 28px;
+    }
+
+    .skill-title {
+        font-size: 20px;
+    }
+
+    .skill-percent {
+        font-size: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .footer {
+        width: 90%; /* Adjust width to fit smaller screens */
+        margin: 20px auto; /* Reduce margin for smaller devices */
+    }
+
+    .foo a {
+        width: 35px; /* Slightly smaller buttons */
+        height: 35px; /* Slightly smaller buttons */
+        font-size: 18px; /* Smaller font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        height: 40px; /* Reduce height on very small screens */
+        font-size: 14px; /* Adjust font size for small screens */
+    }
+
+    .foo a {
+        width: 30px; /* Even smaller buttons */
+        height: 30px; /* Even smaller buttons */
+        font-size: 16px; /* Adjust font size for small screens */
+        margin-left: 3px; /* Reduce margin between buttons */
+    }
+}
